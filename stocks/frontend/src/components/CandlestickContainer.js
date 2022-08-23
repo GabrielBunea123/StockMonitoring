@@ -32,6 +32,7 @@ const CandlestickContainer = () => {
     const [allSocketPrices, setAllSocketPrices] = useState([])
     const [avaliableIndicators, setAvaliableIndicators] = useState([])
     const [historyPeriod, setHistoryPeriod] = useState(40 * 365)
+    const [alertSounded, setAlertSounded] = useState(false)
     var currentPeriod = 7
 
     const { ticker } = useParams()
@@ -287,7 +288,10 @@ const CandlestickContainer = () => {
                 'price': JSON.parse(event.data).data[0].p,
             }))
             notificationSocket.onmessage = function (e) {
-                console.log(JSON.parse(e.data))
+                const data = JSON.parse(e.data);
+                if(data.alert_name){
+                    setAlertSounded(true)
+                }
             }
         });
 
@@ -353,8 +357,6 @@ const CandlestickContainer = () => {
         GetStockFullStats(historyPeriod)//from 1982
         SuperTrend(historyPeriod)
     }, [ticker, historyPeriod])
-
-
 
     return (
         <div className="chart-page">

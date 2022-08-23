@@ -207,7 +207,7 @@ const AlarmModal = ({ indicators, companyProfile, companySymbol }) => {
                         }
                     </div>
                     <div class="modal-footer">
-                        <button onClick={() => { CreateAlert() }} type="button" class="btn fw-bold" style={{ backgroundColor: "#0D90FF", color: "#E4F0FF" }}>Create alert</button>
+                        <button onClick={() => { CreateAlert() }} data-bs-dismiss="modal" aria-label="Close" type="button" class="btn fw-bold" style={{ backgroundColor: "#0D90FF", color: "#E4F0FF" }}>Create alert</button>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,9 @@ export const SelectAlarm = ({ alarmProps, handleChange }) => {
         <select class="form-select" aria-label="Default select example" onChange={handleChange}>
             {alarmProps.map(item => (
                 <>
-                    <option className="select-options" value={item.name}>{item.name}</option>
+                    {item.name != "Supertrend" && item.name != 'Buy/Sell' ?
+                        <option className="select-options" value={item.name}>{item.name}</option>
+                        : null}
                 </>
             ))}
         </select>
