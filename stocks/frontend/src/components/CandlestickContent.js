@@ -20,6 +20,7 @@ import IndicatorsModal from '../functionalComponents/IndicatorsModal';
 import AlarmModal from '../functionalComponents/AlarmModal';
 import MenuCandlestickLeft from '../functionalComponents/MenuCandlestickLeft';
 import MenuCandlestickRight from '../functionalComponents/MenuCandlestickRight';
+import AlarmSoundedModal from "../functionalComponents/AlarmSoundedModal";
 
 
 const drawerWidth = 240;
@@ -96,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 
-const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHLC, currentOHLC, companyProfile, buy_or_sell, avaliableIndicators, setAvaliableIndicators, companies, currentTicker, news, ohlcDataCompanyProfile, lastPrice, dailyStats, basicData }) => {
+const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHLC, currentOHLC, companyProfile, buy_or_sell, avaliableIndicators, setAvaliableIndicators, companies, currentTicker, news, ohlcDataCompanyProfile, lastPrice, dailyStats, basicData, alertSounded, alarmSoundedProps, handleAlertSoundedClose }) => {
     const handle = useFullScreenHandle();
     const [open, setOpen] = useState(false);
 
@@ -132,6 +133,7 @@ const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHL
                     </Typography>
 
                     <AlarmModal indicators={avaliableIndicators} companyProfile={companyProfile} companySymbol={companyProfile.ticker}/>
+                    <AlarmSoundedModal alarmSoundedProps ={alarmSoundedProps} alertSounded={alertSounded} handleAlertSoundedClose={handleAlertSoundedClose}/>
                     <IndicatorsModal avaliableIndicators={avaliableIndicators} setAvaliableIndicators={setAvaliableIndicators} />
                     <SearchModal />
                     <FullScreen handle={handle}>

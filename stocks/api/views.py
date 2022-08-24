@@ -9,7 +9,6 @@ import finnhub
 import numpy as np
 import pandas as pd
 import requests
-import yfinance as yf
 from django.conf import settings
 from django.db.models import Q
 from django.http import JsonResponse
@@ -17,7 +16,6 @@ from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from yahoofinancials import YahooFinancials
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from django.contrib.auth.models import User

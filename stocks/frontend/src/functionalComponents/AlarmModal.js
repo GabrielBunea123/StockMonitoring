@@ -167,12 +167,12 @@ const AlarmModal = ({ indicators, companyProfile, companySymbol }) => {
                                     </label>
                                     {/* handle here for a default value */}
                                 </div>
-                                <div class="form-check pt-2 pb-2">
+                                {/* <div class="form-check pt-2 pb-2">
                                     <input onClick={handleCheckboxClick} class="form-check-input" type="checkbox" id="email"></input>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Send email
                                     </label>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div class="row pt-4">

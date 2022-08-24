@@ -1,6 +1,5 @@
 import pandas as pd
 from pandas import json_normalize
-import yfinance as yf
 from yahoofinancials import YahooFinancials
 import datetime
 import numpy as np

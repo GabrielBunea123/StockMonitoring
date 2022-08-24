@@ -33,6 +33,8 @@ const CandlestickContainer = () => {
     const [avaliableIndicators, setAvaliableIndicators] = useState([])
     const [historyPeriod, setHistoryPeriod] = useState(40 * 365)
     const [alertSounded, setAlertSounded] = useState(false)
+    const handleAlertSoundedClose = () => setAlertSounded(false);
+    const [alarmSoundedProps, setAlarmSoundedProps] = useState({})
     var currentPeriod = 7
 
     const { ticker } = useParams()
@@ -68,7 +70,7 @@ const CandlestickContainer = () => {
                     RunWebSocket(authToken)
                 }
             })
-            .catch(err=>console.log(err))
+            .catch(err => console.log(err))
     }
 
     const GetCompanies = () => {
@@ -142,7 +144,7 @@ const CandlestickContainer = () => {
         fetch("/api/get-stock-full-stats", requestOptions)
             .then(res => res.json())
             .then(data => {
-                if(data.localData===true){
+                if (data.localData === true) {
                     data['c'] = JSON.parse(data['c'])
                     data['h'] = JSON.parse(data['h'])
                     data['l'] = JSON.parse(data['l'])
@@ -289,8 +291,9 @@ const CandlestickContainer = () => {
             }))
             notificationSocket.onmessage = function (e) {
                 const data = JSON.parse(e.data);
-                if(data.alert_name){
+                if (data.alert_name) {
                     setAlertSounded(true)
+                    setAlarmSoundedProps(data)
                 }
             }
         });
@@ -377,6 +380,9 @@ const CandlestickContainer = () => {
                 lastPrice={allSocketPrices[allSocketPrices.length - 2]}
                 dailyStats={dailyStats}
                 basicData={basicData}
+                alertSounded={alertSounded}
+                alarmSoundedProps={alarmSoundedProps}
+                handleAlertSoundedClose={handleAlertSoundedClose}
             />
             <div className="menu-left-candlestick">
                 {loading == false &&
