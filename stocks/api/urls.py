@@ -20,7 +20,8 @@ urlpatterns = [
     path('avaliable-indicators', GetAvaliableIndicators.as_view()),
     path('create-alert', CreateAlert.as_view()),
     path('get-user', GetUser.as_view()),
-    path('get-user-alerts', GetUserAlerts.as_view()),
+    path('get-user-alerts', GetActiveUserAlerts.as_view()),
+    path('get-all-user-alerts', GetAllUserAlerts.as_view()),
     # path('run-web-socket',RunWebSocketForStock.as_view()),
     # path('get-all-companies-ticker', GetAllCompaniesTicker.as_view()),
 ]

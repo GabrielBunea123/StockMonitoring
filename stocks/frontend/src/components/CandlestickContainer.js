@@ -383,6 +383,7 @@ const CandlestickContainer = () => {
                 alertSounded={alertSounded}
                 alarmSoundedProps={alarmSoundedProps}
                 handleAlertSoundedClose={handleAlertSoundedClose}
+                getUserAlerts = {GetUserAlerts}
             />
             <div className="menu-left-candlestick">
                 {loading == false &&

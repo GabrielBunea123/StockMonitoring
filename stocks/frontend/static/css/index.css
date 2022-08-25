@@ -56,6 +56,11 @@ body {
   border-radius: 10px;
   object-fit: cover;
 }
+.alert-table-row {
+  transition: 0.4s;
+  border-bottom: 1px solid #202c47;
+}
+
 .stocks-table-row {
   transition: 0.4s;
   border-bottom: 1px solid #202c47;
@@ -201,14 +206,22 @@ body {
   background-color: #202c47;
 }
 
-.form-control{
-    background-color: white;
-    color:black;
+.form-control {
+  background-color: white;
+  color: black;
 }
 
 @media screen and (max-width: 530px) {
-    .card-auth {
-      width: 95%;
-    }
+  .card-auth {
+    width: 95%;
   }
-  
+}
+
+.profile-img {
+  padding: 2px;
+  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}

@@ -30,28 +30,35 @@ const Navbar = () => {
         <div style={{ overflowY: 'hidden' }}>
             <nav class="navbar navbar-expand-lg navbar-dark nav-background">
                 <div class={windowDimensions.width <= 992 ? "container-fluid" : "container-fluid container"}>
-                    <a class="navbar-brand item-nav-space side-item-font fw-bold me-4" href="/">Stocks</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mt-1 mb-lg-0">
+                        <ul class="navbar-nav me-auto mb-lg-0">
 
-                            <li class="nav-item item-nav-space">
-                                <a class="nav-link active side-item-font fw-bold me-3" aria-current="page" href="/chart/AAPL">
-                                    <i class="fa-solid fa-chart-line me-1"></i> Chart
+                            <li class="navbar-brand">
+                                <a class="nav-link active fw-bold" aria-current="page" href="/">
+                                    Stocks
                                 </a>
                             </li>
 
-                            <li class="nav-item item-nav-space">
-                                <a class="nav-link active side-item-font fw-bold me-3" aria-current="page" href="/predictions">
-                                    <i class="fa-solid fa-code-branch me-1"></i> Predictions
+                            <li class="navbar-brand">
+                                <a class="nav-link active fw-bold" aria-current="page" href="/chart/AAPL">
+                                    {/* <i class="fa-solid fa-chart-line me-1"></i>  */}
+                                    Chart
                                 </a>
                             </li>
 
-                            <li class="nav-item item-nav-space">
-                                <a class="nav-link active side-item-font fw-bold me-3" aria-current="page" href="/profile">
-                                    <i class="fa-solid fa-user me-1"></i> Profile
+                            <li class="navbar-brand">
+                                <a class="nav-link active fw-bold" aria-current="page" href="/predictions">
+                                    {/* <i class="fa-solid fa-code-branch me-1"></i>  */}
+                                    Predictions
+                                </a>
+                            </li>
+
+                            <li class="navbar-brand">
+                                <a class="nav-link active fw-bold" aria-current="page" href="/profile">
+                                    {/* <i class="fa-solid fa-user me-1"></i> */}Profile
                                 </a>
                             </li>
 

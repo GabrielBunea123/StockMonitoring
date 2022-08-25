@@ -15,6 +15,7 @@ class NotificationConsumer(WebsocketConsumer):
         text_data_json = json.loads(text_data)
         self.price = text_data_json['price']
         self.symbol = text_data_json['symbol']
+        print(self.price)
 
         alert = self.get_alert()
         print(alert)

@@ -97,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 
-const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHLC, currentOHLC, companyProfile, buy_or_sell, avaliableIndicators, setAvaliableIndicators, companies, currentTicker, news, ohlcDataCompanyProfile, lastPrice, dailyStats, basicData, alertSounded, alarmSoundedProps, handleAlertSoundedClose }) => {
+const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHLC, currentOHLC, companyProfile, buy_or_sell, avaliableIndicators, setAvaliableIndicators, companies, currentTicker, news, ohlcDataCompanyProfile, lastPrice, dailyStats, basicData, alertSounded, alarmSoundedProps, handleAlertSoundedClose, getUserAlerts }) => {
     const handle = useFullScreenHandle();
     const [open, setOpen] = useState(false);
 
@@ -132,7 +132,7 @@ const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHL
                         {companyProfile.ticker}
                     </Typography>
 
-                    <AlarmModal indicators={avaliableIndicators} companyProfile={companyProfile} companySymbol={companyProfile.ticker}/>
+                    <AlarmModal indicators={avaliableIndicators} companyProfile={companyProfile} companySymbol={companyProfile.ticker} getUserAlerts={getUserAlerts}/>
                     <AlarmSoundedModal alarmSoundedProps ={alarmSoundedProps} alertSounded={alertSounded} handleAlertSoundedClose={handleAlertSoundedClose}/>
                     <IndicatorsModal avaliableIndicators={avaliableIndicators} setAvaliableIndicators={setAvaliableIndicators} />
                     <SearchModal />

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { FormControl, TextField, Alert, AlertTitle } from '@mui/material';
 
 
-const AlarmModal = ({ indicators, companyProfile, companySymbol }) => {
+const AlarmModal = ({ indicators, companyProfile, companySymbol, getUserAlerts }) => {
 
     const [condition, setCondition] = useState('');
     const [trigger, setTrigger] = useState('Crossing')
@@ -90,6 +90,7 @@ const AlarmModal = ({ indicators, companyProfile, companySymbol }) => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
+                    getUserAlerts()
                     setErrorMsg('')
                 })
                 .catch(err => console.error(err))

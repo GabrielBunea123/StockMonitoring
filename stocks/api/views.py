@@ -289,7 +289,7 @@ class GetAvaliableIndicators(generics.ListAPIView):
     serializer_class = AvaliableIndicatorsSerializer
 
 
-class GetUserAlerts(APIView):
+class GetActiveUserAlerts(APIView):
     serializer_class = AlertSerializer
 
     def get(self, request, format=None):
@@ -304,6 +304,25 @@ class GetUserAlerts(APIView):
         # got the current user
 
         existingAlerts = Alert.objects.filter(user=user, isActive=True)
+        if existingAlerts.exists():
+            return Response(AlertSerializer(existingAlerts, many=True).data, status=status.HTTP_200_OK)
+        return Response({"404": "NOT FOUND"}, status=status.HTTP_404_NOT_FOUND)
+
+class GetAllUserAlerts(APIView):
+    serializer_class = AlertSerializer
+
+    def get(self, request, format=None):
+        # get the current user
+        tokenKey = request.headers['Authorization']
+        user = User.objects.filter(auth_token=tokenKey)
+
+        if user.exists():
+            user = user[0].id
+        else:
+            return Response({"404": "Not found"}, status=status.HTTP_404_NOT_FOUND)
+        # got the current user
+
+        existingAlerts = Alert.objects.filter(user=user)
         if existingAlerts.exists():
             return Response(AlertSerializer(existingAlerts, many=True).data, status=status.HTTP_200_OK)
         return Response({"404": "NOT FOUND"}, status=status.HTTP_404_NOT_FOUND)
