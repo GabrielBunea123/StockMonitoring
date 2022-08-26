@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Button } from '@mui/material'
-import SearchRecommendations from '../functionalComponents/SearchRecommendations';
 import SearchModal from '../functionalComponents/SearchModal';
 
 
@@ -44,21 +42,19 @@ const Navbar = () => {
 
                             <li class="navbar-brand">
                                 <a class="nav-link active fw-bold" aria-current="page" href="/chart/AAPL">
-                                    {/* <i class="fa-solid fa-chart-line me-1"></i>  */}
                                     Chart
                                 </a>
                             </li>
 
                             <li class="navbar-brand">
                                 <a class="nav-link active fw-bold" aria-current="page" href="/predictions">
-                                    {/* <i class="fa-solid fa-code-branch me-1"></i>  */}
                                     Predictions
                                 </a>
                             </li>
 
                             <li class="navbar-brand">
                                 <a class="nav-link active fw-bold" aria-current="page" href="/profile">
-                                    {/* <i class="fa-solid fa-user me-1"></i> */}Profile
+                                    Profile
                                 </a>
                             </li>
 

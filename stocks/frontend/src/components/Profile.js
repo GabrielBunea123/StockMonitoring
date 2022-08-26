@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-// import css from '../../'
 import { useNavigate } from 'react-router-dom';
 import StocksTable from '../functionalComponents/StocksTable';
 import Alarm from '@mui/icons-material/Alarm'
@@ -43,7 +42,6 @@ const Profile = () => {
         fetch("/users/get-user", requestOptions)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
                 if (data.username) {
                     setIsAuthenticated(true)
                     setUser(data)
@@ -104,7 +102,6 @@ const Profile = () => {
         fetch("/api/get-all-user-alerts", requestOptions)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setUserAlerts(data)
             })
             .catch(err => console.log(err))
@@ -224,8 +221,7 @@ const Profile = () => {
 
             </div>
 
-            {/* <div>{user.username}</div>
-            <button onClick={handleLogout} className="btn btn-danger mt-5">Logout</button> */}
+            <button onClick={handleLogout} className="btn btn-danger my-5">Logout</button>
 
         </div>
     )

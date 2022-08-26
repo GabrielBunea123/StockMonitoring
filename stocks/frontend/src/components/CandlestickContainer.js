@@ -1,11 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Button } from "@mui/material"
-import Candlestick from '../charts/Candlestick'
-import ReactLoading from 'react-loading';
 import { useParams } from 'react-router-dom'
-import MenuCandlestickRight from '../functionalComponents/MenuCandlestickRight';
 import MenuCandlestickLeft from '../functionalComponents/MenuCandlestickLeft';
-import CandlestickCompanyProfile from '../functionalComponents/CandlestickCompanyProfile';
 import CandlestickContent from './CandlestickContent';
 
 const CandlestickContainer = () => {
@@ -84,7 +79,6 @@ const CandlestickContainer = () => {
                         setCompanies(prev => [...prev, item])
                     }
                 })
-                // setLoadedCompanies(true)
             })
             .catch(error => console.error(error))
     }
@@ -105,7 +99,6 @@ const CandlestickContainer = () => {
                 data.map(item => {
                     setCompanies(prev => [...prev, item])
                 })
-                // setLoadedWatclist(true)
             })
             .catch(error => console.error(error))
     }
@@ -152,10 +145,8 @@ const CandlestickContainer = () => {
                     data['v'] = JSON.parse(data['v'])
                     data['t'] = JSON.parse(data['t'])
                 }
-                var stock_hist_dates = []
                 var all_data_array = []
                 data.t.map((item, index) => {
-                    // stock_hist_dates.push(new Date(item * 1000).toISOString())//convert from timestamp to iso date
                     all_data_array.push(
                         {
                             time: item,
@@ -274,10 +265,6 @@ const CandlestickContainer = () => {
         let url = `ws://${window.location.host}/ws/socket-server/`
         const notificationSocket = new WebSocket(url)
 
-        // notificationSocket.onmessage = function (e) {
-        //     console.log(JSON.parse(e.data))
-        // }
-
         // Connection opened -> Subscribe
         socket.addEventListener('open', function (event) {
             socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': ticker }))
@@ -305,7 +292,6 @@ const CandlestickContainer = () => {
 
         socket.addEventListener('close', (event) => {
             unsubscribe(ticker);
-            console.log("unsubscribed")
             socket.close()
         });
 
@@ -336,7 +322,6 @@ const CandlestickContainer = () => {
 
         chatSocket.onmessage = (e) => {
             let data = JSON.parse(e.data);
-            console.log(data)
         }
 
     }

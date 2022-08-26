@@ -157,7 +157,6 @@ const CandlestickContent = ({ apexChartData, upperBand, lowerBand, setCurrentOHL
                         Menu
                     </Typography>
                     <IconButton onClick={handleDrawerClose}>
-                        {/* {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />} */}
                         <CloseIcon />
                     </IconButton>
                 </DrawerHeader>

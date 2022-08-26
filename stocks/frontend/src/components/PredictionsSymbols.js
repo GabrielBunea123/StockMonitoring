@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CardPredictions from '../PredictionsComponents/CardPredictions'
+import CardPredictions from '../functionalComponents/CardPredictions'
 
 const PredictionsSymbols = () => {
 
@@ -10,7 +10,6 @@ const PredictionsSymbols = () => {
             .then(res => res.json())
             .then(data => {
                 setCompanies(data)
-                console.log(data)
             })
             .catch(error => console.error(error))
     }

@@ -1,16 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import StockDetailsInfo from '../StockDetailsComponents/StockDetailsInfo'
+import StockDetailsInfo from '../functionalComponents/StockDetailsInfo'
 import AreaPriceChart from '../charts/AreaPriceChart'
 import CompanyNews from './CompanyNews';
-import MarketPredictions from './MarketPredictions';
-import StockBasicData from '../StockDetailsComponents/StockBasicData';
-import { Button } from '@mui/material';
-import CandlestickContainer from './CandlestickContainer';
-
+import StockBasicData from '../functionalComponents/StockBasicData';
 
 const StockDetails = () => {
 
@@ -55,7 +48,6 @@ const StockDetails = () => {
         fetch("/api/get-stock-candles", requestOptions)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 var dates = []
 
                 data.t.map((item, index) => {
@@ -109,7 +101,7 @@ const StockDetails = () => {
         }
         fetch("/api/add-to-watch-list", requestOptions)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => null)
             .catch(err => console.error(err))
     }
 

@@ -3,7 +3,6 @@ import { TextField } from "@mui/material"
 import InputAdornment from '@mui/material/InputAdornment';
 
 const SearchModal = ({ }) => {
-    // const [allSymbols, setAllSymbols] = useState([])
     const [filterSymbols, setFilterSymbols] = useState([])
 
     const bootstrapModalRef = useRef()
@@ -86,27 +85,3 @@ const SearchModal = ({ }) => {
 }
 
 export default SearchModal
-
-
-
-
-    // const handleSearchChange = (e) => {
-    // setTimeout(() => {
-    //     const value = e.target.value
-    //     setFilterSymbols(allSymbols.filter(item => item.name.includes(value.toLowerCase()) || item.quote.includes(value.toUpperCase())))
-    // }, 2000)
-    // }
-
-    // const getAllStocks = () => {
-    //     fetch("/api/get-all-companies-ticker")
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setAllSymbols(data)
-    //             setFilterSymbols(data)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
-
-    // useEffect(() => {
-    //     getAllStocks()
-    // }, [])

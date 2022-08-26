@@ -89,7 +89,6 @@ const AlarmModal = ({ indicators, companyProfile, companySymbol, getUserAlerts }
             fetch("/api/create-alert", requestOptions)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     getUserAlerts()
                     setErrorMsg('')
                 })
@@ -168,12 +167,6 @@ const AlarmModal = ({ indicators, companyProfile, companySymbol, getUserAlerts }
                                     </label>
                                     {/* handle here for a default value */}
                                 </div>
-                                {/* <div class="form-check pt-2 pb-2">
-                                    <input onClick={handleCheckboxClick} class="form-check-input" type="checkbox" id="email"></input>
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Send email
-                                    </label>
-                                </div> */}
                             </div>
                         </div>
                         <div class="row pt-4">

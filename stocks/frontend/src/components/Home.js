@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from '@mui/material'
-import Navbar from './Navbar'
 import StocksTable from '../functionalComponents/StocksTable'
 import MarketNews from './MarketNews'
 
 const Home = () => {
 
     const [companies, setCompanies] = useState([])
-    const [stockCandlesPriceData, setStockCandlesPriceData] = useState([])
     const [dailyStocksPrice, setDailyStocksPrice] = useState([])
     const [loadedCompanies, setLoadedCompanies] = useState(false)
     const [loadedWatclist, setLoadedWatclist] = useState(false)
