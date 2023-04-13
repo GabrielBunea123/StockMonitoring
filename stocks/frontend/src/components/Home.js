@@ -21,6 +21,7 @@ const Home = () => {
                     }
                 })
                 setLoadedCompanies(true)
+                setLoadedWatclist(true)
             })
             .catch(error => console.error(error))
     }

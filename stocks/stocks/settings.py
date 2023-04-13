@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'frontend.apps.FrontendConfig',
     'users.apps.UsersConfig',
     'rest_framework',
-    'livereload',
     'channels',
     'rest_framework.authtoken'
 ]
