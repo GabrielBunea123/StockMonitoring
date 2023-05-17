@@ -1,0 +1,113 @@
+.chart-page {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.dropdown-menu-candlestick {
+  background-color: #222632;
+  /* color:white; */
+}
+.dropdown-item:hover {
+  background-color: #141823;
+}
+
+.menu-left-candlestick {
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: absolute;
+  height: auto;
+  top: 70px;
+  left: 75px;
+  z-index: 2;
+}
+.menu-left-candlestick-full-screen {
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: absolute;
+  height: auto;
+  top: 15px;
+  left: 10px;
+  z-index: 2;
+}
+.ohlc-candlestick {
+  color: #e2e2e2;
+  padding-left: 1;
+}
+.menu-right-candlestick {
+  width: 240px;
+  overflow:hidden;
+}
+
+.watchlist-container-candlestick {
+  height:45vh;
+  overflow-y: auto;
+}
+
+.company-profile-container-candlestick {
+  height:55vh;
+  border-top:4px solid #222632;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navbar-candlestick {
+  background-color: #222632;
+}
+.candlestick-height {
+  height: 100vh;
+  width: 100%;
+  cursor: crosshair;
+}
+
+.candlestick-height-full-screen {
+  height: 100vh;
+  cursor: crosshair;
+}
+
+.watchlist-candlestick-element {
+  text-decoration: none;
+}
+
+.watchlist-candlestick-element:hover {
+  background-color: #202c47;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 2670px) {
+  .menu-left-candlestick {
+    max-width: 400px;
+  }
+  .menu-left-candlestick-full-screen {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .menu-left-candlestick {
+    max-width: 300px;
+  }
+  .menu-left-candlestick-full-screen {
+    max-width: 300px;
+  }
+  .menu-right-candlestick {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .optional-col {
+    display: none;
+  }
+  .menu-left-candlestick {
+    width: 200px;
+    padding: 3px;
+  }
+  .menu-left-candlestick-full-screen {
+    width: 200px;
+    padding: 3px;
+  }
+}

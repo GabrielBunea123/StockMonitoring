@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #141823;
+  color: white;
+  zoom: 100%;
+  height: 100%;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #727787;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b3f4b;
+}
+:hover::-webkit-scrollbar-thumb {
+  background: #3b3f4b;
+}
+.colorPallette {
+  color: #26292b;
+  color: #2e3239;
+  color: #5f7adb;
+  color: #adb2ee;
+}
+.colorPallette1 {
+  color: #141823;
+  color: #0d90ff;
+  color: #202c47;
+  color: #f5be3a;
+}
+.home-container {
+  padding-top: 20px;
+}
+.companies-container {
+  justify-content: center;
+}
+.table-responsive-home {
+  padding: 10px;
+  background-color: #141823;
+  /* border:4px solid #202C47; */
+  border-radius: 10px;
+}
+.img-stock {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.img-stock-candlestick {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.alert-table-row {
+  transition: 0.4s;
+  border-bottom: 1px solid #202c47;
+}
+
+.stocks-table-row {
+  transition: 0.4s;
+  border-bottom: 1px solid #202c47;
+}
+.stocks-table-row:hover {
+  background-color: #202c47;
+  cursor: pointer;
+  color: white;
+}
+.stocks-table-row-selected {
+  transition: 0.4s;
+  border: 1.2px solid #0d90ff;
+  /* border-radius: 20px; */
+  background-color: #202c47;
+}
+.stocks-table-row-selected:hover {
+  background-color: #202c47;
+  cursor: pointer;
+  color: white;
+}
+.data-result {
+  padding-top: 10px;
+  max-height: 400px;
+  height: auto;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.data-result::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.data-item {
+  border: 0.1px solid rgb(13, 144, 255, 0.1);
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.data-item:first-child {
+  /* border-start-end-radius: 5px; */
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.data-item:last-child {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.data-item:hover {
+  background-color: #202c47;
+  cursor: pointer;
+  color: white;
+}
+.custom-btn {
+  background-color: #5f7adb;
+}
+.modal-content-bg {
+  background: #222632;
+}
+.modal-footer {
+  background-color: #222632;
+  border-top: 0.5px solid #3d424e;
+}
+.modal-header {
+  background-color: #222632;
+  border-bottom: 0.5px solid #3d424e;
+}
+
+/* .candlestick-components-container{
+    height:100%;
+} */
+
+.weburl {
+  color: #9599a8;
+}
+
+.weburl:hover {
+  color: #0d90ff;
+}
+
+.btn-back:focus {
+  outline: none;
+  box-shadow: none;
+}
+.form-control {
+  background-color: transparent;
+  height: 50px;
+  color: white;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* .select-alert-menu{
+    background-color:#141823;
+} */
+.select-alert-menu-item {
+  background-color: #141823;
+}
+.form-select {
+  background-color: transparent;
+  border-color: #54565f;
+  color: white;
+}
+.select-options {
+  background-color: #222632;
+  color: white;
+}
+.select-options:hover {
+  /* background-color: #0D90FF; */
+  color: whitesmoke !important;
+  background: #0d90ff !important;
+}
+
+.modal-backdrop {
+  display: none !important;
+}
+.modal-open .modal {
+  margin: 0 auto;
+}
+
+.authentication-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.card-auth {
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  border: 0;
+  display: block;
+  margin: auto;
+  width: 500px;
+  margin-top: 50px;
+  background-color: #202c47;
+}
+
+.form-control {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 530px) {
+  .card-auth {
+    width: 95%;
+  }
+}
+
+.profile-img {
+  padding: 2px;
+  border-radius: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}

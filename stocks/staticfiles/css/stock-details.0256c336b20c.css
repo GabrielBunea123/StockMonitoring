@@ -1,0 +1,119 @@
+.colorPallette {
+    color:#26292B;
+    color:#2E3239;
+    color:#5F7ADB;
+    color:#ADB2EE
+}
+.stock-details-header{
+    padding-top:30px;
+}
+.img-stock-details{
+    width:60px;
+    height:60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.current-price-plus{
+    color:greenyellow;
+}
+.current-price-plus-candlestick{
+    color:#26a69a;
+}
+.current-price-minus{
+    color:#ef5350;
+}
+.chart-container{
+    padding-top:60px;
+}
+.nav-pills .nav-item .nav-link {
+    background-color:#202C47;
+    color: #E4F0FF;
+    font-weight: bold;
+    /* font-size: 20px; */
+}
+  
+.nav-pills .nav-item .nav-link.active {
+    background-color: #0D90FF;
+    color:#E4F0FF;
+}
+.market-news-img{
+    object-fit:cover;
+    border-radius: 20px;
+}
+.news-card{
+    width:21rem;
+    margin-top:20px;
+    min-height:17rem;
+    border-radius: 20px;
+}
+.social-sentiment-container{
+    padding-top:40px;
+    font-weight:bold;
+}
+
+.advanced-chart-container{
+    height:700px;
+    padding-top:30px;
+}
+.modal-bg-container{
+    background-color:#2E3239;
+}
+.candlestick-chart-container{
+    background-color:#2E3239;
+    padding:10px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.basic-chart-container{
+    background-color:#202C47;
+    padding:5px;
+    height:500px;
+    border-radius: 5px;
+}
+
+.basic-stock-data-container{
+    background-color:transparent;
+    padding:10px;
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+    .news-card{
+        width:19rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .news-card{
+        width:16rem;
+    }
+    .advanced-chart-container{
+        height:700px
+    }
+    
+}
+@media only screen and (max-width: 992px) {
+    .news-card{
+        width:19rem;
+        margin-top:20px;
+    }
+    .advanced-chart-container{
+        height:700px
+    }
+}
+@media only screen and (max-width: 768px) {
+    .news-card{
+        width:90%;
+        margin:0px;
+        margin-bottom:40px;
+    }
+    .advanced-chart-container{
+        height:600px
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .advanced-chart-container{
+        height:600px
+    }
+}

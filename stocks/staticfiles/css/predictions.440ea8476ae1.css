@@ -1,0 +1,38 @@
+.predictions-card{
+    background-color:#202C47;
+    color:white;
+    text-decoration: none;
+    margin:40px 10px 10px 10px;
+    padding:20px;
+    border-radius: 20px;
+}
+
+.predictions-card:hover{
+    color:#F5BE3A;
+}
+
+.img-stock-predictions{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+    .predictions-card{
+        width:45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .predictions-card{
+        width:45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .predictions-card{
+        width:90%;
+        margin:40px 0px 0px 0px;
+    }
+}
