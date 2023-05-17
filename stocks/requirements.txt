@@ -13,14 +13,13 @@ cffi==1.15.1
 channels==4.0.0
 charset-normalizer==3.1.0
 constantly==15.1.0
-contourpy==1.0.7
 crispy-bootstrap4==2022.1
 cryptography==40.0.1
 cycler==0.11.0
 daphne==4.0.0
 distlib==0.3.6
 dj-database-url==1.2.0
-Django==4.1.7
+Django==3.2.1
 django-cors-headers==3.14.0
 django-crispy-forms==2.0
 django-dotenv==1.4.2
